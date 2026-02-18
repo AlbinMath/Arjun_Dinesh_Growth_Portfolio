@@ -66,44 +66,46 @@ const About = () => {
                     </div>
                 </motion.div>
 
-                {/* Education Section */}
-                <motion.div
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    variants={{
-                        hidden: { opacity: 0 },
-                        visible: {
-                            opacity: 1,
-                            transition: {
-                                staggerChildren: 0.2,
-                                delayChildren: 0.6
+                {/* Education Section - Conditionally Rendered */}
+                {profileData.education && profileData.education.length > 0 && (
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        variants={{
+                            hidden: { opacity: 0 },
+                            visible: {
+                                opacity: 1,
+                                transition: {
+                                    staggerChildren: 0.2,
+                                    delayChildren: 0.6
+                                }
                             }
-                        }
-                    }}
-                    className="mt-16"
-                >
-                    <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6 } } }}>
-                        <div className="flex items-center gap-4 mb-8">
-                            <span className="text-[11px] tracking-[0.25em] uppercase text-gold">Education</span>
-                            <div className="w-10 h-px bg-gold/50"></div>
+                        }}
+                        className="mt-16"
+                    >
+                        <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6 } } }}>
+                            <div className="flex items-center gap-4 mb-8">
+                                <span className="text-[11px] tracking-[0.25em] uppercase text-gold">Education</span>
+                                <div className="w-10 h-px bg-gold/50"></div>
+                            </div>
+                        </motion.div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            {profileData.education.map((edu, index) => (
+                                <motion.div
+                                    key={index}
+                                    variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6 } } }}
+                                    className="p-8 bg-[#161616] border border-white/5 hover:border-gold/20 transition-all duration-300 group"
+                                >
+                                    <h3 className="font-serif text-2xl text-white mb-3 group-hover:text-gold transition-colors leading-tight">{edu.degree}</h3>
+                                    <p className="text-[#999] text-sm mb-2">{edu.institution}</p>
+                                    <p className="text-gold text-xs tracking-widest uppercase opacity-70 group-hover:opacity-100 transition-opacity">{edu.year}</p>
+                                </motion.div>
+                            ))}
                         </div>
                     </motion.div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {profileData.education.map((edu, index) => (
-                            <motion.div
-                                key={index}
-                                variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6 } } }}
-                                className="p-8 bg-[#161616] border border-white/5 hover:border-gold/20 transition-all duration-300 group"
-                            >
-                                <h3 className="font-serif text-2xl text-white mb-3 group-hover:text-gold transition-colors leading-tight">{edu.degree}</h3>
-                                <p className="text-[#999] text-sm mb-2">{edu.institution}</p>
-                                <p className="text-gold text-xs tracking-widest uppercase opacity-70 group-hover:opacity-100 transition-opacity">{edu.year}</p>
-                            </motion.div>
-                        ))}
-                    </div>
-                </motion.div>
+                )}
             </div>
         </section>
     );

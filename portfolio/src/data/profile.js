@@ -89,12 +89,5 @@ export const profileData = {
             description: "Aligning pedagogy, structure, and performance metrics to build scalable and sustainable education models.",
             icon: "Search"
         }
-    ],
-    education: [
-        {
-            degree: "Master of Science - MS, Botany/Plant Biology",
-            institution: "Kannur University (KU)",
-            year: "August 2024 - March 2026"
-        }
     ]
 };

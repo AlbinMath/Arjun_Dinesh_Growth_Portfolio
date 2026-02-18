@@ -2,7 +2,7 @@
 **Education Brand Growth Consultant | EdTech & Learning Systems Strategist**
 
 📍 Kasaragod, Kerala, India  
-📧 [mramiss544@gmail.com](mailto:mramiss544@gmail.com)  
+📧 [arjundineshgrowth@gmail.com](mailto:arjundineshgrowth@gmail.com)  
 🔗 [LinkedIn Profile](https://www.linkedin.com/in/arjun-dinesh-m-36a3a7282)  
 💬 [WhatsApp](https://wa.me/917306557720)
 
@@ -79,4 +79,4 @@ I provide structured consultation to build scalable and sustainable education mo
 ## 📬 Contact
 I am currently open to collaborating with EdTech platforms, hybrid education brands, and learning startups looking to refine their academic systems and scale with clarity.
 
-**Let's Connect:** [mramiss544@gmail.com](mailto:mramiss544@gmail.com)
+**Let's Connect:** [arjundineshgrowth@gmail.com](mailto:arjundineshgrowth@gmail.com)
