@@ -13,8 +13,9 @@ export const profileData = {
         "Technology enhances, not replaces, educators"
     ],
     contact: {
-        email: "mramiss544@gmail.com",
+        email: "arjundineshgrowth@gmail.com",
         linkedin: "https://www.linkedin.com/in/arjun-dinesh-m-36a3a7282",
+        instagram: "https://www.instagram.com/arjundineshgrowth?igsh=MXNjcmRqM2V3NTl0dA==",
         whatsapp: "917306557720",
         location: "Kasaragod, Kerala, India"
     },
@@ -92,13 +93,8 @@ export const profileData = {
     education: [
         {
             degree: "Master of Science - MS, Botany/Plant Biology",
-            institution: "Kannur University",
-            year: "2024 - 2026"
-        },
-        {
-            degree: "Bachelor of Science - BS, Botany/Plant Biology",
-            institution: "Kannur University",
-            year: "2020"
+            institution: "Kannur University (KU)",
+            year: "August 2024 - March 2026"
         }
     ]
 };
