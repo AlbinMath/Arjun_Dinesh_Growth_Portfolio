@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { profileData } from '../data/profile';
-import { Instagram, Linkedin, Mail, Phone, MessageCircle } from 'lucide-react';
+import { Instagram, Linkedin, Mail, Phone, MessageCircle, FileText } from 'lucide-react';
+import resumePdf from '../assets/resume.pdf';
 
 const Contact = () => {
     return (
@@ -63,7 +64,7 @@ const Contact = () => {
                     </motion.div>
 
                     <motion.div
-                        variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6 } } }}
+                        variants={{ hidden: { opacity: 0, y: 0 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6 } } }}
                         className="flex justify-center gap-6 mb-12"
                     >
                         <a href={profileData.contact.instagram} target="_blank" rel="noopener noreferrer" className="w-14 h-14 border border-gold/20 flex items-center justify-center text-[#999] hover:border-gold hover:text-gold hover:bg-gold/15 hover:-translate-y-1 transition-all duration-300 rounded-lg">
@@ -74,16 +75,30 @@ const Contact = () => {
                         </a>
                     </motion.div>
 
-                    <motion.a
+                    <motion.div
                         variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6 } } }}
-                        href={`https://wa.me/${profileData.contact.whatsapp}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-3 px-10 py-4 bg-gold text-[#0a0a0a] font-semibold rounded hover:bg-[#f3e5ab] hover:-translate-y-1 transition-all duration-300 shadow-[0_8px_30px_rgba(212,175,55,0.3)] tracking-[0.15em] uppercase text-xs"
+                        className="flex flex-col md:flex-row justify-center items-center gap-6"
                     >
-                        <MessageCircle className="w-5 h-5" />
-                        Say Hello on WhatsApp
-                    </motion.a>
+                        <a
+                            href={`https://wa.me/${profileData.contact.whatsapp}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-3 px-10 py-4 bg-gold text-[#0a0a0a] font-semibold rounded hover:bg-[#f3e5ab] hover:-translate-y-1 transition-all duration-300 shadow-[0_8px_30px_rgba(212,175,55,0.3)] tracking-[0.15em] uppercase text-xs"
+                        >
+                            <MessageCircle className="w-5 h-5" />
+                            Say Hello on WhatsApp
+                        </a>
+
+                        <a
+                            href={resumePdf}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-3 px-10 py-4 bg-transparent border border-gold text-gold font-semibold rounded hover:bg-gold/10 hover:-translate-y-1 transition-all duration-300 tracking-[0.15em] uppercase text-xs"
+                        >
+                            <FileText className="w-5 h-5" />
+                            View Resume
+                        </a>
+                    </motion.div>
                 </motion.div>
             </div>
         </section>
