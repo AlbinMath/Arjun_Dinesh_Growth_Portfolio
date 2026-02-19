@@ -6,7 +6,7 @@ import resumePdf from '../assets/resume.pdf';
 
 const Contact = () => {
     return (
-        <section id="contact" className="py-24 px-6 md:px-16 bg-[#080808]">
+        <section id="contact" className="py-16 md:py-24 px-6 md:px-16 bg-[#080808]">
             <div className="max-w-4xl mx-auto text-center">
                 <motion.div
                     initial="hidden"
@@ -32,7 +32,7 @@ const Contact = () => {
 
                     <motion.h2
                         variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6 } } }}
-                        className="font-serif text-4xl md:text-5xl lg:text-[60px] font-semibold leading-[1.1] text-white tracking-tight mb-8"
+                        className="font-serif text-3xl md:text-5xl lg:text-[60px] font-semibold leading-[1.1] text-white tracking-tight mb-8"
                     >
                         Let's Build Something Meaningful
                     </motion.h2>
@@ -83,7 +83,7 @@ const Contact = () => {
                             href={`https://wa.me/${profileData.contact.whatsapp}`}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-3 px-10 py-4 bg-gold text-[#0a0a0a] font-semibold rounded hover:bg-[#f3e5ab] hover:-translate-y-1 transition-all duration-300 shadow-[0_8px_30px_rgba(212,175,55,0.3)] tracking-[0.15em] uppercase text-xs"
+                            className="inline-flex items-center justify-center gap-3 px-10 py-4 bg-gold text-[#0a0a0a] font-semibold rounded hover:bg-[#f3e5ab] hover:-translate-y-1 transition-all duration-300 shadow-[0_8px_30px_rgba(212,175,55,0.3)] tracking-[0.15em] uppercase text-xs w-full md:w-auto"
                         >
                             <MessageCircle className="w-5 h-5" />
                             Say Hello on WhatsApp
@@ -93,7 +93,7 @@ const Contact = () => {
                             href={resumePdf}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-3 px-10 py-4 bg-transparent border border-gold text-gold font-semibold rounded hover:bg-gold/10 hover:-translate-y-1 transition-all duration-300 tracking-[0.15em] uppercase text-xs"
+                            className="inline-flex items-center justify-center gap-3 px-10 py-4 bg-transparent border border-gold text-gold font-semibold rounded hover:bg-gold/10 hover:-translate-y-1 transition-all duration-300 tracking-[0.15em] uppercase text-xs w-full md:w-auto"
                         >
                             <FileText className="w-5 h-5" />
                             View Resume

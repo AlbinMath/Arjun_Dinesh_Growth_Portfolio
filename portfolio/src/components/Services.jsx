@@ -28,7 +28,7 @@ const Services = () => {
     return (
         <section id="services" className="py-24 px-6 md:px-16 bg-[#080808]">
             <div className="max-w-7xl mx-auto">
-                <div className="flex flex-col md:flex-row justify-between items-end mb-16">
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}

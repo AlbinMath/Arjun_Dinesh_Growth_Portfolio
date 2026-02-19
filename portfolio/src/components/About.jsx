@@ -4,7 +4,7 @@ import { profileData } from '../data/profile';
 
 const About = () => {
     return (
-        <section id="about" className="py-24 px-6 md:px-16 bg-[#111111] border-y border-gold/10 relative">
+        <section id="about" className="py-16 md:py-24 px-6 md:px-16 bg-[#111111] border-y border-gold/10 relative">
             <div className="max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.4fr] gap-12 items-start">
 
