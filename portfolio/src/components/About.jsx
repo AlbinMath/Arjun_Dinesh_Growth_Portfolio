@@ -33,7 +33,7 @@ const About = () => {
                         className="space-y-6 text-[17px] leading-[1.8] text-[#bbb]"
                     >
                         <p>
-                            I am Arjun Dinesh — an Academic Growth Consultant focused on building high-performance learning ecosystems for education brands, institutions, and educators who want to scale impact, not just output.
+                            I am Arjun Dinesh M — an Education Brand Growth Consultant focused on building high-performance learning ecosystems for education brands, institutions, and educators who want to scale impact, not just output.
                         </p>
                         <p>
                             My work sits at the intersection of pedagogy, systems thinking, and technology. I design structured academic frameworks that remove guesswork from learning — replacing it with measurable outcomes, consistent delivery, and strategic intent.

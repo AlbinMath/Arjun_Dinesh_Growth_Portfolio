@@ -6,14 +6,14 @@ const Footer = () => {
     return (
         <footer className="bg-[#050505] border-t border-gold/10 py-12 px-6 md:px-16 flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="text-center md:text-left">
-                <div className="font-serif text-2xl font-semibold text-gold mb-2">Arjun Dinesh</div>
+                <div className="font-serif text-2xl font-semibold text-gold mb-2">Arjun Dinesh M</div>
                 <div className="text-xs text-[#666] tracking-[0.1em] uppercase">
-                    Academic Growth Consultant | Teacher | Learning Strategist | AI for Educators
+                    Education Brand Growth Consultant | Teacher | Learning Strategist | AI for Educators
                 </div>
             </div>
 
             <div className="text-xs text-[#666]">
-                © {new Date().getFullYear()} Arjun Dinesh. All rights reserved.
+                © {new Date().getFullYear()} Arjun Dinesh M. All rights reserved.
             </div>
 
             <div className="flex gap-4">

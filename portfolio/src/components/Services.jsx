@@ -1,30 +1,41 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-
-const services = [
-    {
-        id: "01",
-        title: "Academic Growth Consultation",
-        description: "Designing structured academic systems and performance frameworks for education brands that want consistency, quality, and measurable growth at scale."
-    },
-    {
-        id: "02",
-        title: "Teacher Performance & Enablement",
-        description: "Improving teaching workflows, pedagogy alignment, and instructional consistency — empowering educators to deliver at their highest potential."
-    },
-    {
-        id: "03",
-        title: "Learning Strategy Design",
-        description: "Building outcome-driven learning journeys that improve engagement, knowledge retention, and course completion for modern learners."
-    },
-    {
-        id: "04",
-        title: "AI for Educators",
-        description: "Helping educators adopt AI tools responsibly — boosting productivity, enhancing content delivery, and preparing classrooms for the future of learning."
-    }
-];
+import { useFeatureFlag } from '../hooks/useFeatureFlag';
 
 const Services = () => {
+    const isAiServiceEnabled = useFeatureFlag('enable-new-services-card', false);
+
+    const services = [
+        {
+            id: "01",
+            title: "Academic Growth Consultation",
+            description: "Designing structured academic systems and performance frameworks for education brands that want consistency, quality, and measurable growth at scale."
+        },
+        {
+            id: "02",
+            title: "Teacher Performance & Enablement",
+            description: "Improving teaching workflows, pedagogy alignment, and instructional consistency — empowering educators to deliver at their highest potential."
+        },
+        {
+            id: "03",
+            title: "Learning Strategy Design",
+            description: "Building outcome-driven learning journeys that improve engagement, knowledge retention, and course completion for modern learners."
+        },
+        {
+            id: "04",
+            title: "AI for Educators",
+            description: "Helping educators adopt AI tools responsibly — boosting productivity, enhancing content delivery, and preparing classrooms for the future of learning."
+        }
+    ];
+
+    if (isAiServiceEnabled) {
+        services.push({
+            id: "NEW",
+            title: "AI Strategy & Implementation",
+            description: "End-to-end AI integration for ed-tech platforms, from chatbots to personalized learning algorithms."
+        });
+    }
+
     return (
         <section id="services" className="py-24 px-6 md:px-16 bg-[#080808]">
             <div className="max-w-7xl mx-auto">
@@ -74,6 +85,7 @@ const Services = () => {
                         </motion.div>
                     ))}
                 </div>
+
             </div>
         </section>
     );

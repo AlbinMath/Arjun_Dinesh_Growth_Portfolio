@@ -24,7 +24,7 @@ const Hero = () => {
                     transition={{ duration: 0.8, delay: 0.3 }}
                     className="text-xs tracking-[0.2em] uppercase text-gold mb-5 font-semibold"
                 >
-                    Academic Growth Consultant
+                    Education Brand Growth Consultant
                 </motion.p>
 
                 <motion.h1
@@ -33,7 +33,7 @@ const Hero = () => {
                     transition={{ duration: 0.8, delay: 0.5 }}
                     className="font-serif text-4xl md:text-5xl lg:text-7xl xl:text-[90px] font-bold leading-[0.95] tracking-tight mb-6 text-white"
                 >
-                    Arjun <br /> <span className="text-gold">Dinesh</span>
+                    Arjun <br /> <span className="text-gold">Dinesh M</span>
                 </motion.h1>
 
                 {/* Mobile Image - Visible only on mobile, placed between title and tags */}
