@@ -6,6 +6,14 @@ export const config = {
 
 export default async function handler(request) {
     try {
+        // If Edge Config is not linked, return empty flags to prevent 500 error
+        if (!process.env.EDGE_CONFIG) {
+            return new Response(JSON.stringify({}), {
+                status: 200,
+                headers: { 'content-type': 'application/json' },
+            });
+        }
+
         // Initialize Edge Config client
         // Expects process.env.EDGE_CONFIG to be set in Vercel Project Settings
         const edgeConfig = createClient(process.env.EDGE_CONFIG);
